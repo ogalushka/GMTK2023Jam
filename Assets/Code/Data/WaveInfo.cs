@@ -8,5 +8,6 @@ namespace Assets.Code.Data
         public Unit unitPrefab;
         public int unitCount;
         public float spawnInterval;
+        public int price;
     }
 }

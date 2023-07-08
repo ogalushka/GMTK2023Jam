@@ -5,14 +5,24 @@ using UnityEngine;
 
 namespace Assets.Code
 {
-    [RequireComponent(typeof(Collider))]
+    [RequireComponent(typeof(Collider2D))]
     public class Building : MonoBehaviour
     {
         public int health;
-        public SpawnEvent spawnedEvent;
 
+        public int reward;
+        public int rewardPerDamage;
+
+        public BuildingEvent spawnedEvent;
+        public BuildingEvent buildingDestroyed;
+        public IntEvent rewardMoney;
         private Collider2D bounds;
         private bool mouseWasOver = false;
+
+        private void Start()
+        {
+            bounds = GetComponent<Collider2D>();
+        }
 
         private void Awake()
         {
@@ -22,8 +32,10 @@ namespace Assets.Code
         public void DealDamage(int amount)
         {
             health -= amount;
+            rewardMoney.Raise(amount * rewardPerDamage);
             if (!IsAlive())
             {
+                buildingDestroyed.Raise(this);
                 gameObject.SetActive(false);
                 //gameObject.GetComponent<SpriteRenderer>().enabled = false;
                 //gameObject.GetComponent<Collider2D>().enabled = false;

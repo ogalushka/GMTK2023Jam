@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Assets.Code.Data
 {
     [CreateAssetMenu(fileName = "SpawnWaveEvent", menuName = "ScriptableObjects/SpawnWaveEvent", order = 1)]
-    public class SpawnEvent : ScriptableObject
+    public class BuildingEvent : ScriptableObject
     {
         private List<Action<Building>> listeners = new List<Action<Building>>();
 

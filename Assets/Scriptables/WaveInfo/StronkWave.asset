@@ -15,3 +15,4 @@ MonoBehaviour:
   unitPrefab: {fileID: 4230997557257798135, guid: 05dc1f17f7598994da30bcefb1e30336, type: 3}
   unitCount: 3
   spawnInterval: 1.5
+  price: 300

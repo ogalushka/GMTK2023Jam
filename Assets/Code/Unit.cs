@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Code.Data;
+using System;
 using UnityEngine;
 
 namespace Assets.Code
@@ -8,8 +9,10 @@ namespace Assets.Code
         public float speed;
         public float distanceOnLane;
         public int health;
+        public GameEvent unitDied;
 
         public PathBehaviour lane;
+        public int damage;
 
         public void SetPath(PathBehaviour lane)
         {
@@ -23,6 +26,7 @@ namespace Assets.Code
             if (health <= 0)
             {
                 Destroy(gameObject);
+                unitDied.Raise();
             }
         }
 
@@ -43,6 +47,7 @@ namespace Assets.Code
             {
                 passedBuilding.DealDamage(1);
                 Destroy(gameObject);
+                unitDied.Raise();
                 return;
             }
 

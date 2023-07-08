@@ -99,10 +99,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fcc091148ee0c4fb73d83ba2618628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 8
   distanceOnLane: 0
   health: 2
+  unitDied: {fileID: 11400000, guid: 0883aab7f01842c41a669c2cc17dcc23, type: 2}
   lane: {fileID: 0}
+  damage: 0
 --- !u!58 &2505461998584461413
 CircleCollider2D:
   m_ObjectHideFlags: 0

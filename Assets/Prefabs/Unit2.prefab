@@ -100,4 +100,6 @@ MonoBehaviour:
   speed: 0.9
   distanceOnLane: 0
   health: 5
+  unitDied: {fileID: 11400000, guid: 0883aab7f01842c41a669c2cc17dcc23, type: 2}
   lane: {fileID: 0}
+  damage: 0
