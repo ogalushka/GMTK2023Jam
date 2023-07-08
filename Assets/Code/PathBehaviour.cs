@@ -1,4 +1,5 @@
 ﻿using Assets.Code.Data;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Code
@@ -6,6 +7,16 @@ namespace Assets.Code
     public class PathBehaviour : MonoBehaviour
     {
         public PathNode[] nodes;
+
+        [HideInInspector]
+        public Queue<SpawnQueueItem> spawnQueue;
+        [HideInInspector]
+        public float spawnCooldown;
+
+        private void Awake()
+        {
+            spawnQueue = new Queue<SpawnQueueItem>();
+        }
 
         public Transform First()
         {
@@ -89,16 +100,10 @@ namespace Assets.Code
         //Debug view
         private void OnDrawGizmos()
         {
-            if (nodes.Length > 0)
-            {
-                Gizmos.DrawSphere(nodes[0].transform.position, .1f);
-            }
-
             for (var i = 1; i < nodes.Length; i++)
             {
                 var curentPosition = nodes[i].transform.position;
                 var prevPosition = nodes[i - 1].transform.position;
-                Gizmos.DrawSphere(curentPosition, .1f);
                 Gizmos.DrawLine(curentPosition, prevPosition);
             }
         }

@@ -1,27 +1,43 @@
-﻿using UnityEngine;
+﻿using Assets.Code.Data;
+using System;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Assets.Code.UI
 {
+    [Serializable]
+    public class ButtonMapping
+    {
+        public string buttonName;
+        public WaveInfo units;
+    }
+
     [RequireComponent(typeof(UIDocument))]
     public class UIEventsListener : MonoBehaviour
     {
         private const string activeButtonClass = "UnitButtonActive";
 
+        public WaveInfo basicWaveInfo;
+        public SelectedUnits selectedUnits;
+        public ButtonMapping[] UnitButtons;
+
         private Button activeButton;
-        private Button basicUnitButton;
 
         private void OnEnable()
         {
             var uiDocument = GetComponent<UIDocument>();
-            basicUnitButton = uiDocument.rootVisualElement.Q<Button>("BaseUnit");
-            basicUnitButton.RegisterCallback<ClickEvent>(OnBasicUnitButtonClicked);
+
+            foreach (var buttonMapping in UnitButtons)
+            {
+                var button = uiDocument.rootVisualElement.Q<Button>(buttonMapping.buttonName);
+                button.RegisterCallback<ClickEvent>((e) => OnButtonClick(button, buttonMapping.units));
+            }
         }
 
-        public void OnBasicUnitButtonClicked(ClickEvent e)
+        public void OnButtonClick(Button button, WaveInfo waveInfo)
         {
-            
-            if (activeButton == basicUnitButton)
+            if (activeButton == button)
             {
                 DisableActiveButton();
                 return;
@@ -29,8 +45,9 @@ namespace Assets.Code.UI
 
             DisableActiveButton();
 
-            basicUnitButton.AddToClassList(activeButtonClass);
-            activeButton = basicUnitButton;
+            button.AddToClassList(activeButtonClass);
+            activeButton = button;
+            selectedUnits.waveInfo = waveInfo;
         }
 
         private void Update()
@@ -41,6 +58,7 @@ namespace Assets.Code.UI
                 {
                     activeButton.RemoveFromClassList(activeButtonClass);
                     activeButton = null;
+                    selectedUnits.waveInfo = null;
                 }
             }
         }
@@ -51,6 +69,7 @@ namespace Assets.Code.UI
             {
                 activeButton.RemoveFromClassList(activeButtonClass);
                 activeButton = null;
+                selectedUnits.waveInfo = null;
             }
         }
     }

@@ -5,5 +5,9 @@
             <ui:Button display-tooltip-when-elided="true" name="BaseUnit" class="UnitButton UnitButtonSelected" />
             <ui:Label text="Price" display-tooltip-when-elided="true" style="-unity-text-align: upper-center;" />
         </ui:VisualElement>
+        <ui:VisualElement>
+            <ui:Button display-tooltip-when-elided="true" name="StrongUnit" class="UnitButton UnitButtonSelected" style="background-image: url(&apos;project://database/Assets/Images/beauty6.png?fileID=2800000&amp;guid=790d98afb12e883489e4ba39c36cbf01&amp;type=3#beauty6&apos;);" />
+            <ui:Label text="Price" display-tooltip-when-elided="true" style="-unity-text-align: upper-center;" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
