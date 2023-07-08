@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/UIStyles.uss?fileID=7433441132597879392&amp;guid=f79b27d56d413234eb631a7ef0e78c7f&amp;type=3#UIStyles" />
+    <ui:VisualElement name="UnitButtons" style="left: auto; align-items: flex-start; justify-content: center; width: 100%; height: 100%;">
+        <ui:VisualElement>
+            <ui:Button display-tooltip-when-elided="true" name="BaseUnit" class="UnitButton UnitButtonSelected" />
+            <ui:Label text="Price" display-tooltip-when-elided="true" style="-unity-text-align: upper-center;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
