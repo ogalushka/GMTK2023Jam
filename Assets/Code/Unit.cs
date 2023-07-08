@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Assets.Code
 {
@@ -6,12 +7,23 @@ namespace Assets.Code
     {
         public float speed;
         public float distanceOnLane;
+        public int health;
 
         public PathBehaviour lane;
 
         public void SetPath(PathBehaviour lane)
         {
             this.lane = lane;
+            transform.position = lane.First().position;
+        }
+
+        public void DealDamage(int damage)
+        {
+            health -= damage;
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
 
         private void Update()

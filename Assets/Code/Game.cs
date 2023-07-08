@@ -6,6 +6,7 @@ public class Game : MonoBehaviour
 {
     public PathBehaviour lane;
     public Unit unitPrefab;
+    public GameObject unitsContainer;
 
     public List<Unit> units;
 
@@ -29,8 +30,7 @@ public class Game : MonoBehaviour
 
     private void SpawnUnits(PathBehaviour path)
     {
-        var startNode = path.First();
-        var unit = Instantiate(unitPrefab, startNode.position, startNode.rotation);
+        var unit = Instantiate(unitPrefab, unitsContainer.transform);
         unit.SetPath(path);
     }
 }
