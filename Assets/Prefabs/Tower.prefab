@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 2
-  baseShootCooldown: 0.7
+  baseShootCooldown: 1
   baseProjectileSpeed: 5
   baseDamage: 1
   baseCost: 100

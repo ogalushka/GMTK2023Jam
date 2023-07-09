@@ -44,8 +44,11 @@ namespace Assets.Code
 
                 if (largestThreat.GetThreat() > 0 && largestThreat.GetUpgradeCost() <= gold)
                 {
-                    gold -= largestThreat.GetUpgradeCost();
-                    largestThreat.UpgradeTower();
+                    if (largestThreat.level < 3)
+                    {
+                        gold -= largestThreat.GetUpgradeCost();
+                        largestThreat.UpgradeTower();
+                    }
                     largestThreat.ResetThreat();
                 }
 
