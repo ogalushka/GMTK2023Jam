@@ -10,6 +10,7 @@ namespace Assets.Code
         public int baseDamage;
         public int baseCost;
         public GameObject unitsContainer;
+        public AudioSource shootSound;
 
         public Projectile projectilePrefab;
 
@@ -69,6 +70,7 @@ namespace Assets.Code
                 projectile.SetTarget(currentTarget);
                 projectile.SetDamage(damage);
                 projectile.speed = projectileSpeed;
+                shootSound.PlayOneShot(shootSound.clip);
                 return true;
             }
 

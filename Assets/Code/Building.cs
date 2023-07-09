@@ -19,6 +19,7 @@ namespace Assets.Code
         public IntEvent rewardMoney;
         private bool mouseWasOver = false;
         public TextAnimator goldTextPrefab;
+        public GameObject deathPrefab;
         public Transform uiParent;
 
         [HideInInspector]
@@ -42,6 +43,7 @@ namespace Assets.Code
             if (!IsAlive())
             {
                 buildingDestroyed.Raise(this);
+                Instantiate(deathPrefab, transform.position, Quaternion.identity);
                 ShowGoldGain(reward + damageReward);
                 gameObject.SetActive(false);
             }

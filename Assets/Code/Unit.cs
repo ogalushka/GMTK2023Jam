@@ -12,6 +12,9 @@ namespace Assets.Code
         public int penalty;
         public GameEvent unitDied;
 
+        public AudioSource hurtSound;
+        public GameObject diePrefab;
+
         public SpriteRenderer spriteRenderer;
         public Animator animator;
 
@@ -30,8 +33,13 @@ namespace Assets.Code
             if (health <= 0)
             {
                 FindObjectOfType<TowerBuilder>().gold += penalty; 
+                Instantiate(diePrefab, transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 unitDied.Raise();
+            }
+            else
+            {
+                hurtSound.PlayOneShot(hurtSound.clip);
             }
         }
 
