@@ -8,9 +8,16 @@ namespace Assets.Code
 
         private Unit target;
 
+        private int damage =0;
+
         public void SetTarget(Unit target)
         {
             this.target = target;
+        }
+
+        public void SetDamage(int newDamage)
+        {
+            damage = newDamage;
         }
 
         private void Update()
@@ -27,7 +34,7 @@ namespace Assets.Code
 
             if (distanceToTarget < speedThisFrame)
             {
-                target.DealDamage(1);
+                target.DealDamage(damage);
                 Destroy(gameObject);
                 return;
             }
