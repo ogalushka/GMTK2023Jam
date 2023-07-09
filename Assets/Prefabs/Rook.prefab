@@ -155,6 +155,7 @@ MonoBehaviour:
   speed: 1.5
   distanceOnLane: 0
   health: 9
+  penalty: 20
   unitDied: {fileID: 11400000, guid: 0883aab7f01842c41a669c2cc17dcc23, type: 2}
   spriteRenderer: {fileID: 6272153177605601409}
   animator: {fileID: 2170118390191708128}

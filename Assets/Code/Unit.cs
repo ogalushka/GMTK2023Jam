@@ -9,6 +9,7 @@ namespace Assets.Code
         public float speed;
         public float distanceOnLane;
         public int health;
+        public int penalty;
         public GameEvent unitDied;
 
         public SpriteRenderer spriteRenderer;
@@ -28,7 +29,7 @@ namespace Assets.Code
             health -= damage;
             if (health <= 0)
             {
-                FindObjectOfType<TowerBuilder>().gold += 10; 
+                FindObjectOfType<TowerBuilder>().gold += penalty; 
                 Destroy(gameObject);
                 unitDied.Raise();
             }

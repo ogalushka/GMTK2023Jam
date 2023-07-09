@@ -308,7 +308,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: health
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: reward
@@ -662,6 +662,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 378488801}
     m_Modifications:
+    - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: uiParent
       value: 
@@ -1068,7 +1072,7 @@ MonoBehaviour:
   - {fileID: 1511516758}
   - {fileID: 1765493015}
   - {fileID: 1705815437}
-  waitForBuild: 5
+  waitForBuild: 4
   aiStartGold: 100
   gold: 100
 --- !u!114 &315084027 stripped
@@ -1216,7 +1220,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: health
-      value: 50
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: uiParent
@@ -1871,6 +1875,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 378488801}
     m_Modifications:
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: health
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: uiParent
       value: 
       objectReference: {fileID: 129399990}
@@ -2168,7 +2176,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: health
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: reward
@@ -2644,6 +2652,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 378488801}
     m_Modifications:
+    - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: uiParent
       value: 
@@ -3333,6 +3345,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 378488801}
     m_Modifications:
+    - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: health
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: uiParent
       value: 
@@ -5308,6 +5324,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 378488801}
     m_Modifications:
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: uiParent
       value: 
       objectReference: {fileID: 129399990}
@@ -5797,7 +5817,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: health
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: reward
@@ -6340,6 +6360,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 378488801}
     m_Modifications:
+    - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: health
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: uiParent
       value: 
