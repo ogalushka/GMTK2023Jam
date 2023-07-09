@@ -13,7 +13,11 @@ namespace Assets.Code
         {
             for (int i=0; i<towers.Length; i++)
             {
-                towers[i].RaiseThreat(threat);
+                if (towers[i].level < 3)
+                {
+                    towers[i].RaiseThreat(threat);
+
+                }
             }
         }
 
