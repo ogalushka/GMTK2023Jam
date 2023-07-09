@@ -27,7 +27,7 @@ namespace Assets.Code
 
         private void Update()
         {
-            shootCooldown = baseShootCooldown * level;
+            shootCooldown = baseShootCooldown / level;
             projectileSpeed = baseProjectileSpeed * level;
             damage = baseDamage * level;
             upgradeCost = baseCost * (level + 1);
