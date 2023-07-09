@@ -49,7 +49,7 @@ namespace Assets.Code
 
             if (passedBuilding != null)
             {
-                passedBuilding.DealDamage(1);
+                passedBuilding.DealDamage(damage);
                 Destroy(gameObject);
                 unitDied.Raise();
                 return;

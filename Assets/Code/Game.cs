@@ -21,6 +21,7 @@ public class Game : MonoBehaviour
     public IntEvent rewardMoney;
     public GameEvent unitDiedEvent;
     public BuildingEvent buildingDestroyedEvent;
+    public PathEvent pathEvent;
 
     private Queue<SpawnQueueItem>[] pathQueues;
     private int playerMoney;
@@ -31,6 +32,7 @@ public class Game : MonoBehaviour
         rewardMoney.AddListeners(RewardMoney);
         buildingDestroyedEvent.AddListeners(BuildingDestroyedHandler);
         unitDiedEvent.AddListeners(CheckGameOver);
+        pathEvent.AddListeners(SpawnOnPath);
 
         pathQueues = new Queue<SpawnQueueItem>[paths.Length];
         for (var i = 0; i < pathQueues.Length; i++)
@@ -47,6 +49,7 @@ public class Game : MonoBehaviour
         rewardMoney.RemoveListeners(RewardMoney);
         unitDiedEvent.RemoveListeners(CheckGameOver);
         buildingDestroyedEvent.RemoveListeners(BuildingDestroyedHandler);
+        pathEvent.RemoveListeners(SpawnOnPath);
     }
 
     private void Update()
@@ -81,6 +84,32 @@ public class Game : MonoBehaviour
             return;
         }
 
+        if (selectedUnits.waveInfo == null)
+        {
+            return;
+        }
+
+        var waveInfo = selectedUnits.waveInfo;
+        if (waveInfo.price > playerMoney)
+        {
+            return;
+        }
+
+        SetMoney(playerMoney - waveInfo.price);
+
+        for (var i = 0; i < waveInfo.unitCount; i++)
+        {
+            path.spawnQueue.Enqueue(new SpawnQueueItem
+            {
+                path = path,
+                cooldown = waveInfo.spawnInterval,
+                unitPrefab = waveInfo.unitPrefab
+            });
+        }
+    }
+
+    private void SpawnOnPath(PathBehaviour path)
+    {
         if (selectedUnits.waveInfo == null)
         {
             return;
