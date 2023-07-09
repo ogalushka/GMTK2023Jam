@@ -1,5 +1,6 @@
 ﻿using Assets.Code.Data;
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Assets.Code
@@ -9,6 +10,14 @@ namespace Assets.Code
     {
         public int health;
         public SpawnEvent spawnedEvent;
+
+        private Collider2D bounds;
+        private bool mouseWasOver = false;
+
+        private void Awake()
+        {
+            bounds = GetComponent<Collider2D>();
+        }
 
         public void DealDamage(int amount)
         {
@@ -26,19 +35,47 @@ namespace Assets.Code
             return health > 0;
         }
 
-        private void OnMouseOver()
+        private void Update()
+        {
+            // OnMouseDown for some reason stops wokring when relaodin a scene, so i'm going manualy
+            var worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            worldPos.z = 0;
+            var isOver = bounds.bounds.Contains(worldPos);
+
+            if (mouseWasOver != isOver)
+            {
+                if (isOver)
+                {
+                    HandleMouseOver();
+                }
+                else
+                {
+                    HandleMouseExit();
+                }
+
+                mouseWasOver = isOver;
+            }
+
+            if (Input.GetMouseButtonDown(0) && isOver)
+            {
+                HandleMouseDown();
+            }
+        }
+
+        private void HandleMouseOver()
         {
             gameObject.GetComponent<Light>().intensity = 1f;
         }
 
-        private void OnMouseExit()
+        private void HandleMouseExit()
         {
             gameObject.GetComponent<Light>().intensity = 0f;
         }
 
-        private void OnMouseDown()
+        private void HandleMouseDown()
         {
             spawnedEvent.Raise(this);
         }
     }
 }
+
