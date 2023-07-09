@@ -35,6 +35,7 @@ namespace Assets.Code
                 {
                     gold -= largestThreat.GetUpgradeCost();
                     largestThreat.UpgradeTower();
+                    largestThreat.ResetThreat();
                 }
 
 
