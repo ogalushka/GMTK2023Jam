@@ -192,6 +192,10 @@ PrefabInstance:
       propertyPath: health
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: uiParent
+      value: 
+      objectReference: {fileID: 129399990}
     - target: {fileID: 1902677927904163697, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1115,6 +1119,10 @@ PrefabInstance:
       propertyPath: health
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: uiParent
+      value: 
+      objectReference: {fileID: 129399990}
     - target: {fileID: 1902677927904163697, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -5124,6 +5132,10 @@ PrefabInstance:
       propertyPath: health
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: uiParent
+      value: 
+      objectReference: {fileID: 129399990}
     - target: {fileID: 1902677927904163697, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: m_RootOrder
       value: 9
