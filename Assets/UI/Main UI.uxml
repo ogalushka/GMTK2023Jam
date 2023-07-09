@@ -9,6 +9,10 @@
             <ui:Button display-tooltip-when-elided="true" name="StrongUnit" class="UnitButton UnitButtonSelected" style="background-image: url(&apos;project://database/Assets/Images/beauty6.png?fileID=2800000&amp;guid=790d98afb12e883489e4ba39c36cbf01&amp;type=3#beauty6&apos;);" />
             <ui:Label text="Price" display-tooltip-when-elided="true" name="StrongUnitPrice" style="-unity-text-align: upper-center; color: rgb(255, 101, 0); -unity-font: url(&apos;project://database/Assets/Font/Kenney%20Bold.ttf?fileID=12800000&amp;guid=203d50ada8a639a4b991848c9e1aed9d&amp;type=3#Kenney Bold&apos;); -unity-font-definition: none; font-size: 10px;" />
         </ui:VisualElement>
+        <ui:VisualElement>
+            <ui:Button display-tooltip-when-elided="true" name="FastUnit" class="UnitButton UnitButtonSelected" style="background-image: url(&apos;project://database/Assets/Images/bishop_icon.png?fileID=2800000&amp;guid=1fc6de8ba09edb745b9a511c308d8f8e&amp;type=3#bishop_icon&apos;);" />
+            <ui:Label text="Price" display-tooltip-when-elided="true" name="FastUnitPrice" style="-unity-text-align: upper-center; color: rgb(255, 101, 0); -unity-font: url(&apos;project://database/Assets/Font/Kenney%20Bold.ttf?fileID=12800000&amp;guid=203d50ada8a639a4b991848c9e1aed9d&amp;type=3#Kenney Bold&apos;); -unity-font-definition: none; font-size: 10px;" />
+        </ui:VisualElement>
     </ui:VisualElement>
     <ui:VisualElement name="Balance" style="position: absolute;">
         <ui:Label text="0" display-tooltip-when-elided="true" name="PlayerMoney" style="height: 15px; width: 70px; -unity-text-align: upper-right; font-size: 16px; color: rgb(255, 101, 0); -unity-text-outline-width: 1px; -unity-font: url(&apos;project://database/Assets/Font/Kenney%20Bold.ttf?fileID=12800000&amp;guid=203d50ada8a639a4b991848c9e1aed9d&amp;type=3#Kenney Bold&apos;); -unity-font-definition: none;" />
