@@ -16,6 +16,8 @@ namespace Assets.Code
             if (!IsAlive())
             {
                 gameObject.SetActive(false);
+                //gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                //gameObject.GetComponent<Collider2D>().enabled = false;
             }
         }
 
@@ -26,6 +28,12 @@ namespace Assets.Code
 
         private void OnMouseOver()
         {
+            gameObject.GetComponent<Light>().intensity = 1f;
+        }
+
+        private void OnMouseExit()
+        {
+            gameObject.GetComponent<Light>().intensity = 0f;
         }
 
         private void OnMouseDown()
