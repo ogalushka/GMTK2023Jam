@@ -29,7 +29,7 @@ namespace Assets.Code
 
             if (buildTimer<=0)
             {
-                gold += 30;
+                gold += 75;
                 int i;
                 Tower largestThreat = towers[0];
                 for (i = 1; i < towers.Length; i++)
