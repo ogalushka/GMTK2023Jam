@@ -3791,6 +3791,8 @@ MonoBehaviour:
     units: {fileID: 11400000, guid: 446f868c0425d9240bc5c5a78355348c, type: 2}
   - buttonName: StrongUnit
     units: {fileID: 11400000, guid: 59a40121e3c5acb45a3b64a9b4b60c49, type: 2}
+  - buttonName: FastUnit
+    units: {fileID: 11400000, guid: 9cf66797bcbbcfd4596f7d89c904488b, type: 2}
 --- !u!114 &1502389334
 MonoBehaviour:
   m_ObjectHideFlags: 0
