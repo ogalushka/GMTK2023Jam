@@ -320,7 +320,7 @@ PrefabInstance:
       objectReference: {fileID: 129399990}
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: rewardPerDamage
-      value: 70
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 1902677927904163697, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: m_RootOrder
@@ -398,6 +398,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d35d397e7608d0e4caaa0f176c74ed1d, type: 3}
+    - target: {fileID: 4713430015495933702, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: threat
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4713430015495933702, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: towers.Array.size
       value: 2
@@ -563,7 +567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f72ae7e24025b43bd264cc6cdbabe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threat: 2
+  threat: 10
   towers:
   - {fileID: 714732230}
 --- !u!1001 &161225309
@@ -721,6 +725,10 @@ PrefabInstance:
     - target: {fileID: 4067670182896635159, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: m_Name
       value: Bastion 2M
+      objectReference: {fileID: 0}
+    - target: {fileID: 4713430015495933702, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: threat
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
@@ -917,6 +925,10 @@ PrefabInstance:
       propertyPath: unitsContainer
       value: 
       objectReference: {fileID: 816599032}
+    - target: {fileID: 166436420313321774, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
+      propertyPath: baseShootCooldown
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 166436420313321775, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1213,6 +1225,7 @@ PrefabInstance:
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: rewardPerDamage
       value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 831797082015018813, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1689,9 +1702,17 @@ PrefabInstance:
       value: Tower (11)
       objectReference: {fileID: 0}
     - target: {fileID: 166436420313321774, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
+      propertyPath: baseDamage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 166436420313321774, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
       propertyPath: unitsContainer
       value: 
       objectReference: {fileID: 816599032}
+    - target: {fileID: 166436420313321774, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
+      propertyPath: baseShootCooldown
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 166436420313321775, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1853,6 +1874,10 @@ PrefabInstance:
       propertyPath: uiParent
       value: 
       objectReference: {fileID: 129399990}
+    - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: rewardPerDamage
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 1902677927904163697, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2155,7 +2180,8 @@ PrefabInstance:
       objectReference: {fileID: 129399990}
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: rewardPerDamage
-      value: 70
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 831797082015018813, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2236,6 +2262,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d35d397e7608d0e4caaa0f176c74ed1d, type: 3}
+    - target: {fileID: 4713430015495933702, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: threat
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4713430015495933702, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: towers.Array.size
       value: 2
@@ -2677,6 +2707,10 @@ PrefabInstance:
     - target: {fileID: 4067670182896635159, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: m_Name
       value: Bastion 2ML
+      objectReference: {fileID: 0}
+    - target: {fileID: 4713430015495933702, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: threat
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
@@ -3303,6 +3337,10 @@ PrefabInstance:
       propertyPath: uiParent
       value: 
       objectReference: {fileID: 129399990}
+    - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: rewardPerDamage
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 1902677927904163697, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3358,6 +3396,10 @@ PrefabInstance:
     - target: {fileID: 4067670182896635159, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: m_Name
       value: Bastion 1R
+      objectReference: {fileID: 0}
+    - target: {fileID: 4713430015495933702, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: threat
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
@@ -3474,7 +3516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f72ae7e24025b43bd264cc6cdbabe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threat: 1
+  threat: 4
   towers:
   - {fileID: 161225311}
   - {fileID: 1828113111}
@@ -3586,6 +3628,10 @@ PrefabInstance:
       propertyPath: unitsContainer
       value: 
       objectReference: {fileID: 816599032}
+    - target: {fileID: 166436420313321774, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
+      propertyPath: baseShootCooldown
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 166436420313321775, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -3795,7 +3841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f72ae7e24025b43bd264cc6cdbabe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threat: 1
+  threat: 6
   towers:
   - {fileID: 1828113111}
   - {fileID: 1377767186}
@@ -3961,6 +4007,10 @@ PrefabInstance:
       propertyPath: unitsContainer
       value: 
       objectReference: {fileID: 816599032}
+    - target: {fileID: 166436420313321774, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
+      propertyPath: baseShootCooldown
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 166436420313321775, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4037,7 +4087,7 @@ PrefabInstance:
       objectReference: {fileID: 816599032}
     - target: {fileID: 166436420313321774, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
       propertyPath: baseShootCooldown
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 166436420313321775, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
       propertyPath: m_Enabled
@@ -4174,9 +4224,17 @@ PrefabInstance:
       value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 166436420313321774, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
+      propertyPath: baseDamage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 166436420313321774, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
       propertyPath: unitsContainer
       value: 
       objectReference: {fileID: 816599032}
+    - target: {fileID: 166436420313321774, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
+      propertyPath: baseShootCooldown
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 166436420313321775, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4527,7 +4585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f72ae7e24025b43bd264cc6cdbabe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threat: 2
+  threat: 1
   towers: []
 --- !u!114 &1628979415
 MonoBehaviour:
@@ -4602,7 +4660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f72ae7e24025b43bd264cc6cdbabe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threat: 1
+  threat: 6
   towers:
   - {fileID: 1180392907}
   - {fileID: 0}
@@ -4618,9 +4676,17 @@ PrefabInstance:
       value: Tower (14)
       objectReference: {fileID: 0}
     - target: {fileID: 166436420313321774, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
+      propertyPath: baseDamage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 166436420313321774, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
       propertyPath: unitsContainer
       value: 
       objectReference: {fileID: 816599032}
+    - target: {fileID: 166436420313321774, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
+      propertyPath: baseShootCooldown
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 166436420313321775, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4737,9 +4803,17 @@ PrefabInstance:
       value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 166436420313321774, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
+      propertyPath: baseDamage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 166436420313321774, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
       propertyPath: unitsContainer
       value: 
       objectReference: {fileID: 816599032}
+    - target: {fileID: 166436420313321774, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
+      propertyPath: baseShootCooldown
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 166436420313321775, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -5046,7 +5120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f72ae7e24025b43bd264cc6cdbabe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threat: 1
+  threat: 6
   towers:
   - {fileID: 161225311}
   - {fileID: 1828113111}
@@ -5138,7 +5212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f72ae7e24025b43bd264cc6cdbabe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threat: 1
+  threat: 4
   towers:
   - {fileID: 1180392907}
 --- !u!1001 &1828113109
@@ -5621,6 +5695,10 @@ PrefabInstance:
       propertyPath: unitsContainer
       value: 
       objectReference: {fileID: 816599032}
+    - target: {fileID: 166436420313321774, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
+      propertyPath: baseShootCooldown
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 166436420313321775, guid: b8d8826059033fb4e872ace3754727f1, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -5731,7 +5809,7 @@ PrefabInstance:
       objectReference: {fileID: 129399990}
     - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: rewardPerDamage
-      value: 70
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 1902677927904163697, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: m_RootOrder
@@ -5809,6 +5887,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d35d397e7608d0e4caaa0f176c74ed1d, type: 3}
+    - target: {fileID: 4713430015495933702, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: threat
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4713430015495933702, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: towers.Array.size
       value: 2
@@ -6262,6 +6344,10 @@ PrefabInstance:
       propertyPath: uiParent
       value: 
       objectReference: {fileID: 129399990}
+    - target: {fileID: 262555383464184338, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
+      propertyPath: rewardPerDamage
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 1902677927904163697, guid: cf0357f681d941e4db04ad79efd9694b, type: 3}
       propertyPath: m_RootOrder
       value: 0

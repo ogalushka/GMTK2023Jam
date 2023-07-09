@@ -159,7 +159,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 6272153177605601409}
   animator: {fileID: 2170118390191708128}
   lane: {fileID: 0}
-  damage: 5
+  damage: 3
 --- !u!50 &2392739162412460015
 Rigidbody2D:
   serializedVersion: 4
