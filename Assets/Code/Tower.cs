@@ -15,14 +15,18 @@ namespace Assets.Code
 
         private float currentRateCooldown;
 
-        private int threatLevel = 0;
-        private int level = 1;
+        public int threatLevel = 0;
+        public int level = 0;
 
         private float shootCooldown;
         private float projectileSpeed;
         private int damage;
         private int upgradeCost;
 
+        private void OnDrawGizmos()
+        {
+            MyDebug.DrawCircle(transform.position, range, 32, Color.red);
+        }
 
 
         private void Update()
@@ -33,7 +37,7 @@ namespace Assets.Code
             upgradeCost = baseCost * (level + 1);
 
             currentRateCooldown -= Time.deltaTime;
-            if (currentRateCooldown <= 0)
+            if (currentRateCooldown <= 0 && level > 0)
             {
                 if (TryShoot())
                 {
@@ -78,6 +82,7 @@ namespace Assets.Code
 
         public void UpgradeTower()
         {
+            GetComponent<SpriteRenderer>().enabled = true;
             level++;
         }
 

@@ -14,31 +14,42 @@ namespace Assets.Code
         public float waitForBuild = 0f;
         private float buildTimer = 0f;
 
-        private int gold = 100000;
+        public int aiStartGold = 100;
+        public int gold;
 
         private void Start()
         {
             buildTimer = waitForBuild;
+            gold = aiStartGold;
         }
 
         void Update()
         {
+            buildTimer -= Time.deltaTime;
+
             if (buildTimer<=0)
             {
+                gold += 30;
                 int i;
                 Tower largestThreat = towers[0];
                 for (i = 1; i < towers.Length; i++)
-                    if (towers[i].GetThreat() > largestThreat.GetThreat() ); 
+                {
+                    if (towers[i].GetThreat() > largestThreat.GetThreat())
+                    {
                         largestThreat = towers[i];
+                    }
+                }
 
-                if (largestThreat.GetUpgradeCost() > gold)
+                Debug.Log("Threat: " + largestThreat.GetThreat() + ", Cost: " + largestThreat.GetUpgradeCost());
+
+                if (largestThreat.GetThreat() > 0 && largestThreat.GetUpgradeCost() <= gold)
                 {
                     gold -= largestThreat.GetUpgradeCost();
                     largestThreat.UpgradeTower();
                     largestThreat.ResetThreat();
                 }
 
-
+                buildTimer = waitForBuild;
             }
 
         }

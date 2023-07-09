@@ -28,6 +28,7 @@ namespace Assets.Code
             health -= damage;
             if (health <= 0)
             {
+                FindObjectOfType<TowerBuilder>().gold += 10; 
                 Destroy(gameObject);
                 unitDied.Raise();
             }
