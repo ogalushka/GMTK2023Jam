@@ -101,5 +101,6 @@ MonoBehaviour:
   baseShootCooldown: 1
   baseProjectileSpeed: 5
   baseDamage: 1
+  baseCost: 100
   unitsContainer: {fileID: 0}
   projectilePrefab: {fileID: 5074627071054605706, guid: 6b3596fea51883e48b140f9d95b407b2, type: 3}
