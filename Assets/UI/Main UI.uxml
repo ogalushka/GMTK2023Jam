@@ -1,24 +1,24 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/UIStyles.uss?fileID=7433441132597879392&amp;guid=f79b27d56d413234eb631a7ef0e78c7f&amp;type=3#UIStyles" />
-    <ui:VisualElement name="UnitButtons" style="left: auto; align-items: flex-start; justify-content: center; width: 100%; height: 100%; position: absolute;">
+    <ui:VisualElement name="UnitButtons" style="left: auto; align-items: flex-start; justify-content: center; width: 100%; height: 100%; position: absolute; color: rgb(255, 101, 0);">
         <ui:VisualElement>
             <ui:Button display-tooltip-when-elided="true" name="BaseUnit" class="UnitButton UnitButtonSelected" />
-            <ui:Label text="Price" display-tooltip-when-elided="true" name="BaseUnitPrice" style="-unity-text-align: upper-center; color: rgba(211, 219, 53, 255);" />
+            <ui:Label text="Price" display-tooltip-when-elided="true" name="BaseUnitPrice" style="-unity-text-align: upper-center; color: rgb(255, 101, 0); -unity-font: url(&apos;project://database/Assets/Font/Kenney%20Bold.ttf?fileID=12800000&amp;guid=203d50ada8a639a4b991848c9e1aed9d&amp;type=3#Kenney Bold&apos;); -unity-font-definition: none; font-size: 10px;" />
         </ui:VisualElement>
         <ui:VisualElement>
             <ui:Button display-tooltip-when-elided="true" name="StrongUnit" class="UnitButton UnitButtonSelected" style="background-image: url(&apos;project://database/Assets/Images/beauty6.png?fileID=2800000&amp;guid=790d98afb12e883489e4ba39c36cbf01&amp;type=3#beauty6&apos;);" />
-            <ui:Label text="Price" display-tooltip-when-elided="true" name="StrongUnitPrice" style="-unity-text-align: upper-center; color: rgba(211, 219, 53, 255); -unity-font: none;" />
+            <ui:Label text="Price" display-tooltip-when-elided="true" name="StrongUnitPrice" style="-unity-text-align: upper-center; color: rgb(255, 101, 0); -unity-font: url(&apos;project://database/Assets/Font/Kenney%20Bold.ttf?fileID=12800000&amp;guid=203d50ada8a639a4b991848c9e1aed9d&amp;type=3#Kenney Bold&apos;); -unity-font-definition: none; font-size: 10px;" />
         </ui:VisualElement>
     </ui:VisualElement>
     <ui:VisualElement name="Balance" style="position: absolute;">
-        <ui:Label text="0" display-tooltip-when-elided="true" name="PlayerMoney" style="height: 15px; width: 70px; -unity-text-align: upper-right; font-size: 24px; color: rgba(211, 219, 53, 255); -unity-text-outline-width: 1px;" />
+        <ui:Label text="0" display-tooltip-when-elided="true" name="PlayerMoney" style="height: 15px; width: 70px; -unity-text-align: upper-right; font-size: 16px; color: rgb(255, 101, 0); -unity-text-outline-width: 1px; -unity-font: url(&apos;project://database/Assets/Font/Kenney%20Bold.ttf?fileID=12800000&amp;guid=203d50ada8a639a4b991848c9e1aed9d&amp;type=3#Kenney Bold&apos;); -unity-font-definition: none;" />
     </ui:VisualElement>
-    <ui:VisualElement name="GameOver" class="Hidden" style="position: absolute; width: 100%; height: 100%; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.78);">
-        <ui:Label text="Game Over" display-tooltip-when-elided="true" style="font-size: 98px; color: rgb(255, 255, 255);" />
-        <ui:Button text="Try Again" display-tooltip-when-elided="true" name="TryAgainButton" style="font-size: 53px; height: 108px; width: 340px;" />
+    <ui:VisualElement name="GameOver" class="Hidden" style="position: absolute; width: 100%; height: 100%; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.78); -unity-font: url(&apos;project://database/Assets/Font/Kenney%20Bold.ttf?fileID=12800000&amp;guid=203d50ada8a639a4b991848c9e1aed9d&amp;type=3#Kenney Bold&apos;);">
+        <ui:Label text="Game Over" display-tooltip-when-elided="true" style="font-size: 98px; color: rgb(255, 255, 255); -unity-font: url(&apos;project://database/Assets/Font/Kenney%20Bold.ttf?fileID=12800000&amp;guid=203d50ada8a639a4b991848c9e1aed9d&amp;type=3#Kenney Bold&apos;); -unity-font-definition: none;" />
+        <ui:Button text="Try Again" display-tooltip-when-elided="true" name="TryAgainButton" style="font-size: 53px; height: 108px; width: 340px; -unity-font: url(&apos;project://database/Assets/Font/Kenney%20Bold.ttf?fileID=12800000&amp;guid=203d50ada8a639a4b991848c9e1aed9d&amp;type=3#Kenney Bold&apos;); -unity-font-definition: none;" />
     </ui:VisualElement>
     <ui:VisualElement name="GameWin" class="Hidden" style="position: absolute; width: 100%; height: 100%; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.78);">
-        <ui:Label text="You&apos;ve prevailed!" display-tooltip-when-elided="true" style="font-size: 98px; color: rgb(255, 255, 255);" />
-        <ui:Button text="Win Again" display-tooltip-when-elided="true" name="WinAgainButton" style="font-size: 53px; height: 108px; width: 340px;" />
+        <ui:Label text="You&apos;ve prevailed!" display-tooltip-when-elided="true" style="font-size: 98px; color: rgb(255, 255, 255); -unity-font: url(&apos;project://database/Assets/Font/Kenney%20Bold.ttf?fileID=12800000&amp;guid=203d50ada8a639a4b991848c9e1aed9d&amp;type=3#Kenney Bold&apos;); -unity-font-definition: none;" />
+        <ui:Button text="Win Again" display-tooltip-when-elided="true" name="WinAgainButton" style="font-size: 53px; height: 108px; width: 340px; -unity-font: url(&apos;project://database/Assets/Font/Kenney%20Bold.ttf?fileID=12800000&amp;guid=203d50ada8a639a4b991848c9e1aed9d&amp;type=3#Kenney Bold&apos;); -unity-font-definition: none;" />
     </ui:VisualElement>
 </ui:UXML>

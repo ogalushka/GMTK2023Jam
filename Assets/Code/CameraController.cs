@@ -28,11 +28,11 @@ public class CameraController : MonoBehaviour
 
         if (mousePosition.x < screenEdgeDistanceToMove)
         {
-            movement += Vector3.left;
+            //movement += Vector3.left;
         }
         else if (mousePosition.x > Screen.width - screenEdgeDistanceToMove)
         {
-            movement += Vector3.right;
+            //movement += Vector3.right;
         }
 
         if (mousePosition.y < screenEdgeDistanceToMove)

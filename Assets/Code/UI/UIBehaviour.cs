@@ -42,7 +42,13 @@ namespace Assets.Code.UI
                 var text = uiDocument.rootVisualElement.Q<Label>(buttonMapping.buttonName + priceSuffix);
                 text.text = buttonMapping.units.price.ToString();
                 button.RegisterCallback<ClickEvent>((e) => OnButtonClick(button, buttonMapping.units));
+
+                if (activeButton == null)
+                {
+                    OnButtonClick(button, buttonMapping.units);
+                }
             }
+
 
             moneyLabel = uiDocument.rootVisualElement.Q<Label>("PlayerMoney");
             if (moneyBeforeStartHack >= 0)
@@ -78,12 +84,6 @@ namespace Assets.Code.UI
 
         public void OnButtonClick(Button button, WaveInfo waveInfo)
         {
-            if (activeButton == button)
-            {
-                DisableActiveButton();
-                return;
-            }
-
             DisableActiveButton();
 
             button.AddToClassList(activeButtonClass);
@@ -91,26 +91,11 @@ namespace Assets.Code.UI
             selectedUnits.waveInfo = waveInfo;
         }
 
-        private void Update()
-        {
-            if (Input.GetMouseButtonDown(1))
-            {
-                if (activeButton != null)
-                {
-                    activeButton.RemoveFromClassList(activeButtonClass);
-                    activeButton = null;
-                    selectedUnits.waveInfo = null;
-                }
-            }
-        }
-
         private void DisableActiveButton()
         {
             if (activeButton != null)
             {
                 activeButton.RemoveFromClassList(activeButtonClass);
-                activeButton = null;
-                selectedUnits.waveInfo = null;
             }
         }
 

@@ -1,4 +1,5 @@
 ﻿using Assets.Code.Data;
+using Assets.Code.UI;
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -16,8 +17,12 @@ namespace Assets.Code
         public BuildingEvent spawnedEvent;
         public BuildingEvent buildingDestroyed;
         public IntEvent rewardMoney;
-        private Collider2D bounds;
         private bool mouseWasOver = false;
+        public TextAnimator goldTextPrefab;
+        public Transform uiParent;
+
+        [HideInInspector]
+        public Collider2D bounds;
 
         private void Start()
         {
@@ -32,14 +37,25 @@ namespace Assets.Code
         public void DealDamage(int amount)
         {
             health -= amount;
-            rewardMoney.Raise(amount * rewardPerDamage);
+            var damageReward = amount * rewardPerDamage;
+            rewardMoney.Raise(damageReward);
             if (!IsAlive())
             {
                 buildingDestroyed.Raise(this);
+                ShowGoldGain(reward + damageReward);
                 gameObject.SetActive(false);
-                //gameObject.GetComponent<SpriteRenderer>().enabled = false;
-                //gameObject.GetComponent<Collider2D>().enabled = false;
             }
+            else
+            {
+                ShowGoldGain(damageReward);
+            }
+        }
+
+        private void ShowGoldGain(int amount)
+        {
+            var text = Instantiate(goldTextPrefab, uiParent);
+            text.SetAmount(amount);
+            text.transform.position = transform.position;
         }
 
         public bool IsAlive()
